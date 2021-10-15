@@ -11,5 +11,6 @@
 	Data de Abertura: <input type="text" name="data"/>
 	<button type="submit">Cadastrar</button>
 </form>
+<br/> <a href="<c:url value="/listaEmpresas" />">Voltar</a>
 </body>
 </html>

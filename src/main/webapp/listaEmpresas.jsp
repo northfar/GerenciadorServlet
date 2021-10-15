@@ -8,9 +8,16 @@
 <title>Insert title here</title>
 </head>
 <body>
+<a href="<c:url value="/formNovaEmpresa.jsp" />">Cadastro</a><br/>
+Lista de empresas:
 	<ul>
 	<c:forEach items="${empresas}" var="empresa">
-		<li>${empresa.nome } - <fmt:formatDate pattern="dd/MM/yyyy" value="${empresa.dataAbertura}"/></li>
+		<li>
+			${empresa.nome } - <fmt:formatDate pattern="dd/MM/yyyy" value="${empresa.dataAbertura}"/>
+			<a href="<c:url value="/mostraEmpresa?id=${empresa.id}"/>">Editar</a>
+			<a href="<c:url value="/removeEmpresa?id=${empresa.id}"/>">Remover</a>
+			
+		</li>
 	</c:forEach>
 	</ul>
 </body>

@@ -23,7 +23,7 @@ public class ListaEmpresasServlet extends HttpServlet{
 	private static final long serialVersionUID = 3788255134023988891L;
 
 	@Override
-	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+	protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		Banco banco = new Banco();
 		List<Empresa> lista = banco.getEmpresas();
